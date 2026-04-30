@@ -52,6 +52,8 @@ module.exports = function(req, res) {
     });
     response.on('end', function() {
       try {
+        console.log('STATUS:', response.statusCode);
+        console.log('BODY:', data.slice(0, 500));
         var parsed = JSON.parse(data);
         res.status(response.statusCode).json(parsed);
       } catch(e) {
