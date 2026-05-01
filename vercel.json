@@ -1,7 +1,5 @@
 {
-  "routes": [
-    { "src": "/api/anthropic", "dest": "/api/anthropic.js" },
-    { "src": "/api/feedback", "dest": "/api/feedback.js" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
